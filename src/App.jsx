@@ -1,12 +1,14 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { MasonryPage } from '@/pages/MasonryPage.jsx';
+import { TimeLinePage } from '@/pages/TimeLinePage.jsx';
+
+const router = createBrowserRouter([
+  { path: '/', element: <MasonryPage /> },
+  { path: '/time-line/', element: <TimeLinePage /> },
+]);
+
 function App() {
-  return (
-    <>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-      distinctio, dolores pariatur qui quis reiciendis rerum. A adipisci aperiam
-      consequuntur, doloremque fugit nam officiis provident qui, repellat sunt,
-      veritatis voluptates!
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

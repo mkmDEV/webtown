@@ -1,0 +1,78 @@
+.slick-slide .featured-image {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
+.slider-container {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    background: linear-gradient(
+      to right,
+      var(--bg-color),
+      var(--bg-color),
+      transparent
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10rem;
+    z-index: 4;
+  }
+}
+
+.slide-card {
+  width: 23vw;
+
+  @media screen and (max-width: 768px) {
+    width: 32vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container::before {
+    width: 15vw;
+  }
+}
+
+.slide-date {
+  margin-top: 98px;
+  position: relative;
+
+  & span {
+    background-color: var(--bg-color);
+    font-size: 20px;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    flex: 1;
+    width: 50%;
+    border-bottom: 1px dashed var(--bs-gray);
+    top: 65%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}

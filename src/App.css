@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('./styles/variables.css');
+@import url('./styles/slick-slider.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+a.no-underline {
+  &,
+  & * {
+    text-decoration: none;
+  }
+}
+
+.card {
+  --bs-card-border-width: 0;
+  --bs-card-cap-bg: white;
+}
+
+.mx-5 {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
+
+.title {
+  margin-right: 10px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 100%;
+    background-color: var(--bs-blue);
+    position: absolute;
+    right: -10px;
+    top: 0;
+    border-radius: 2px;
+  }
+}

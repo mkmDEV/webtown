@@ -1,0 +1,8 @@
+:root {
+    --bg-color: #f5f5f5;
+    --bs-blue: #0254a7;
+    --bs-gray: #e0e0e0;
+    --bs-link-color: var(--bs-blue);
+    --bs-border-color: var(--bs-gray);
+    --bs-border-radius: 0.75rem; /* az 12px */
+}
